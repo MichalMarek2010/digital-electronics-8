@@ -1,4 +1,4 @@
-# Lab 1: YOUR_FIRSTNAME LASTNAME
+# Lab 1: David Strouhal //YOUR_FIRSTNAME LASTNAME
 
 ### De Morgan's laws
 
