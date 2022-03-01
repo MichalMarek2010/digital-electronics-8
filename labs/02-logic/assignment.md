@@ -37,11 +37,12 @@
 
 2. Equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
-   ![Logic functions](images/comparator_min.png)
+   ![Logic functions](images/equation.png)
 
-   \begin{align*}greater_{min}^{SoP} = (B_{1}\cdot \overline{A_{1}})+(B_{0}\cdot \overline{A_{1}}\cdot \overline{A_{0}})+(B_{0}\cdot{B_{1}}\cdot \overline{A_{0}})\\
-less_{min}^{PoS} =  \\
-\end{align*} 
+   \begin{align*}
+   greater_{min}^{SoP} =&~ (B_{1}\cdot \overline{A_{1}})+(B_{0}\cdot \overline{A_{0}}\cdot \overline{A_{1}})+(B_{0}\cdot{B_{1}}\cdot \overline{A_{0}})\\
+   less_{min}^{PoS} =&~ (\overline{B_{0}}+ {A_{1}})\cdot(\overline{B_{1}}+ {A_{0}})\cdot(B_{1}+{A_{0}}+{A_{1}})\cdot(B_{0}\cdot\overline{B_{1}}\cdot \overline{A_{0}})\\
+   \end{align*} 
 
 ### 4-bit comparator
 
