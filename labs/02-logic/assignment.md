@@ -1,4 +1,4 @@
-# Lab 2: YOUR_FIRSTNAME LASTNAME
+# Lab 2: David Strouhal
 
 0. Complete the truth table for 2-bit *Identity comparator* (B equals A), and two *Magnitude comparators* (B is greater than A, B is less than A). Note that, such a digital device has four inputs and three outputs/functions.
 
@@ -39,11 +39,15 @@
 
    ![Logic functions](images/comparator_min.png)
 
+   \begin{align*}greater_{min}^{SoP} = (B_{1}\cdot \overline{A_{1}})+(B_{0}\cdot \overline{A_{1}}\cdot \overline{A_{0}})+(B_{0}\cdot{B_{1}}\cdot \overline{A_{0}})\\
+less_{min}^{PoS} =  \\
+\end{align*} 
+
 ### 4-bit comparator
 
 1. Listing of VHDL stimulus process from testbench file (`testbench.vhd`) with at least one assert (use BCD codes of your student ID digits as input combinations). Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
-   Last two digits of my student ID: **xxxx??**
+   Last two digits of my student ID: xxxx71
 
 ```vhdl
     p_stimulus : process
@@ -74,4 +78,8 @@
 
 3. Link to your public EDA Playground example:
 
-   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
+   2bit comparator: [https://www.edaplayground.com/x/CsxM](https://www.edaplayground.com/x/CsxM)
+
+   4bit comparator: [https://www.edaplayground.com/x/TzCa](https://www.edaplayground.com/x/TzCa)
+
+   
