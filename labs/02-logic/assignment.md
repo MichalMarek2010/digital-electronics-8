@@ -52,29 +52,29 @@ less_{min}^{PoS} =  \\
 ```vhdl
     p_stimulus : process
     begin
-        -- Report a note at the beginning of stimulus process
-        report "Stimulus process started" severity note;
+      -- Report a note at the beginning of stimulus process
+      report "Stimulus process for 4-bit binary comparator started" severity note;
+		------------------------------------------------------------
 
-        -- First test case
-        s_b <= "BCD_OF_YOUR_SECOND_LAST_ID_DIGIT"; -- Such as "0101" if ID = xxxx56
-        s_a <= "BCD_OF_YOUR_LAST_ID_DIGIT";        -- Such as "0110" if ID = xxxx56
-        wait for 100 ns;
-        -- Expected output
-        assert ((s_B_greater_A = 'WRITE_CORRECT_VALUE_HERE') and
-                (s_B_equals_A  = 'WRITE_CORRECT_VALUE_HERE') and
-                (s_B_less_A    = 'WRITE_CORRECT_VALUE_HERE'))
+        -- Test case for last 2 ID digits --> xxxx71...
+        s_d <= "0111"; s_c <= "0001"; wait for 100 ns;
+        -- ... and its expected outputs
+        assert ((s_D_greater_C = '1') and
+                (s_D_equals_C  = '0') and
+                (s_D_less_C    = '0'))
         -- If false, then report an error
-        report "Input combination COMPLETE_THIS_TEXT FAILED" severity error;
+        -- If true, then do not report anything
+        report "Id input combination 0111, 0001 FAILED" severity error; 
 
         -- Report a note at the end of stimulus process
         report "Stimulus process finished" severity note;
-        wait;
+        wait; -- Data generation process is suspended forever
     end process p_stimulus;
 ```
 
 2. Text console screenshot during your simulation, including reports.
 
-   ![your figure]()
+   ![Test console screenshot](images/test_console.png)
 
 3. Link to your public EDA Playground example:
 
