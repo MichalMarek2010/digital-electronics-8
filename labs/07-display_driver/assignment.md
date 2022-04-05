@@ -92,7 +92,7 @@ Due to the physiological properties of human vision, it is necessary that the ti
 
 2. Screenshot with simulated time waveforms. Test reset as well. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![Simulation waveform](iamges\display_driver_simulation.png)
+   ![Simulation waveform](images\display_driver_simulation.png)
 
 ### Eight-digit driver
 
