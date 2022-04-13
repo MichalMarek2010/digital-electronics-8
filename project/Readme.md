@@ -11,3 +11,4 @@ SWITCH 0-15  +  LED 0-15  -> prednastavene texty, podle zvoleneho switche bude b
 
 ![7-seg-Alphabet](https://user-images.githubusercontent.com/80918583/163126511-b0c49e79-4f40-4a6a-9243-33181b9d1fcf.jpg)
 
+![7-seg-Alphabet](Images/7-seg-Alphabet.jpg)
