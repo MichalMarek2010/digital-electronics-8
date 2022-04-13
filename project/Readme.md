@@ -13,3 +13,16 @@ Runing text 7-seg display
 
 Ukradeno z https://codegolf.stackexchange.com/questions/173837/longest-seven-segment-word
 
+** Components:
+  * Clock1 -- překreslování displeje
+  * Clock2 -- posun displeje
+  * alphabetTo7seg -- 7 digit number to display
+  * memoryForMesages -- uchování až 16 zpráv v paměti pro výběr
+  * codeText7Seg -- převod textu to binary number
+  * move              -- posun textu za každou časovou jednotku a jeden znak
+  * select         -- výběr 8 znaků z memory
+  * reset          -- rychlost 0, posun na začátek textu
+  
+  top
+  
+  
