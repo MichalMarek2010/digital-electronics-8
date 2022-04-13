@@ -12,3 +12,4 @@ SWITCH 0-15  +  LED 0-15  -> prednastavene texty, podle zvoleneho switche bude b
 ![7-seg-Alphabet](Images/7-seg-Alphabet.jpg)
 
 123
+456
