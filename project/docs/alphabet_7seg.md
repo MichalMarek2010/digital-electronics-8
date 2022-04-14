@@ -5,8 +5,8 @@
 ```vhdl
     entity alphabet_7seg is
         port(
-            alphabet_i : in  std_logic_vector(6 - 1 downto 0);
-            seg_o : out std_logic_vector(7 - 1 downto 0)
+            alphabet_i : in  std_logic_vector(6 - 1 downto 0);  -- input character coded according to table 
+            seg_o : out std_logic_vector(7 - 1 downto 0)        -- output for 7seg display with common anode
         );
     end entity alphabet_7seg;
 ```
