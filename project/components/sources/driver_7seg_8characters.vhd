@@ -122,49 +122,49 @@ begin
     begin
         if rising_edge(clk) then
             if (reset = '1') then
-                s_alphabet <= "11111111";
+                s_alphabet <= "111111";
                 dig_o <= "11111110";
             else
                 case s_cnt is
                         
 				-- DEFINE ALL OUTPUTS FOR "111" HERE
                     when "111" =>
-                        s_hex <= data7_i;
+                        s_alphabet <= data7_i;
                         dig_o <= "01111111";
 
                     	-- DEFINE ALL OUTPUTS FOR "110" HERE
                     when "110" =>
-                        s_hex <= data6_i;
+                        s_alphabet <= data6_i;
                         dig_o <= "10111111";
 
 	                  -- DEFINE ALL OUTPUTS FOR "101" HERE
                     when "101" =>
-                        s_hex <= data5_i;
+                        s_alphabet <= data5_i;
                         dig_o <= "11011111";
 
                     	-- DEFINE ALL OUTPUTS FOR "100" HERE
                     when "100" =>
-                        s_hex <= data4_i;
+                        s_alphabet <= data4_i;
                         dig_o <= "11101111";
 
 			  	-- DEFINE ALL OUTPUTS FOR "011" HERE
                     when "011" =>
-                        s_hex <= data3_i;
+                        s_alphabet <= data3_i;
                         dig_o <= "11110111";
 
                     	-- DEFINE ALL OUTPUTS FOR "010" HERE
                     when "010" =>
-                        s_hex <= data2_i;
+                        s_alphabet <= data2_i;
                         dig_o <= "11111011";
 
                     	-- DEFINE ALL OUTPUTS FOR "001" HERE
                     when "001" =>
-                        s_hex <= data1_i;
+                        s_alphabet <= data1_i;
                         dig_o <= "11011101";
 
                     	-- DEFINE ALL OUTPUTS FOR OTHERS HERE
                     when others =>
-                        s_hex <= data0_i;
+                        s_alphabet <= data0_i;
                         dig_o <= "11101110";
 
                 end case;
