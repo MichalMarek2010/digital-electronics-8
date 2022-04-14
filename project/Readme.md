@@ -16,10 +16,11 @@ Ukradeno z https://codegolf.stackexchange.com/questions/173837/longest-seven-seg
 ** Components:
   * Clock1 -- překreslování displeje
   * Clock2 -- posun displeje
-  * alphabet_7seg -- 7 digit number to display
+  * DONE - alphabet_7seg, clock_enable, cnt_up_down, driver_7seg_8characters -- 7 digit number to display
+  ** Přijme na vstupu 8 znaků kódovaných dle tabulky, na výstupu jsou signály pro displej
   * memoryForMesages -- uchování až 16 zpráv v paměti pro výběr
   * codeText7Seg -- převod textu to binary number
-  * move              -- posun textu za každou časovou jednotku a jeden znak
+  * move           -- posun textu za každou časovou jednotku a jeden znak
   * select         -- výběr 8 znaků z memory
   * reset          -- rychlost 0, posun na začátek textu
   
