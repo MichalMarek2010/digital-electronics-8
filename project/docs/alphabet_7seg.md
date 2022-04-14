@@ -1,4 +1,4 @@
-# alphabet_7seg.vhd notes
+# alphabet_7seg.vhd
 
 0.  Component in/out:
 
