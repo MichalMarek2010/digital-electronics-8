@@ -9,7 +9,7 @@ Runing text 7-seg display
 
 * SWITCH 0-15  +  LED 0-15  -> prednastavene texty, podle zvoleneho switche bude behat text (maximalne 16 prednastavenych textu)
 
-![7-seg-Alphabet](Images/7-seg-Alphabet.jpg)
+![7-seg-Alphabet](images/7-seg-Alphabet.jpg)
 
 Ukradeno z https://codegolf.stackexchange.com/questions/173837/longest-seven-segment-word
 
