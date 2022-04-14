@@ -3,42 +3,54 @@
 1.  Component can transcode maximum of 64 (2^6) characters according to following table, to a 7 segment common anode display.
 
    ![7seg_commonAnode_display](../Images/Common-Anode-7-Segment-Display-Internal-Working.gif)
+   > The image above was used from website: [How Seven Segment Display Works & Interface it with Arduino](https://lastminuteengineers.com/seven-segment-arduino-tutorial/).
+   >
+
+   ![Used_font](../Images/7-seg-Alphabet.jpg)
+   > The image above was used from website: [Longest Seven Segment Word](https://codegolf.stackexchange.com/questions/173837/longest-seven-segment-word).
+   >
 
     Completed decoder truth table for **common anode** 7-segment display.
 
    | **Character** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
    | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-   | 0 | 0000 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
-   | 1 | 0001 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
-   | 2 |      |   |   |   |   |   |   |   |
-   | 3 |      |   |   |   |   |   |   |   |
-   | 4 |      |   |   |   |   |   |   |   |
-   | 5 |      |   |   |   |   |   |   |   |
-   | 6 |      |   |   |   |   |   |   |   |
-   | 7 |      |   |   |   |   |   |   |   |
-   | 8 | 1000 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-   | 9 |      |   |   |   |   |   |   |   |
-   | A |      |   |   |   |   |   |   |   |
-   | b |      |   |   |   |   |   |   |   |
-   | C |      |   |   |   |   |   |   |   |
-   | d |      |   |   |   |   |   |   |   |
-   | E | 1110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
-   | F | 1111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
-   | 9 |      |   |   |   |   |   |   |   |
-   | A |      |   |   |   |   |   |   |   |
-   | b |      |   |   |   |   |   |   |   |
-   | C |      |   |   |   |   |   |   |   |
-   | d |      |   |   |   |   |   |   |   |
-   | 9 |      |   |   |   |   |   |   |   |
-   | A |      |   |   |   |   |   |   |   |
-   | b |      |   |   |   |   |   |   |   |
-   | C |      |   |   |   |   |   |   |   |
-   | d |      |   |   |   |   |   |   |   |
-   | 9 |      |   |   |   |   |   |   |   |
-   | A |      |   |   |   |   |   |   |   |
-   | b |      |   |   |   |   |   |   |   |
-   | C |      |   |   |   |   |   |   |   |
-   | d |      |   |   |   |   |   |   |   |
+   | 0 | 000000 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+   | 1 | 000001 | 1 | 0 | 0 | 1 | 1 | 1 | 1 |
+   | 2 | 000010 |   |   |   |   |   |   |   |
+   | 3 | 000011 |   |   |   |   |   |   |   |
+   | 4 | 000100 |   |   |   |   |   |   |   |
+   | 5 | 000101 |   |   |   |   |   |   |   |
+   | 6 | 000110 |   |   |   |   |   |   |   |
+   | 7 | 000111 |   |   |   |   |   |   |   |
+   | 8 | 001000 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+   | 9 | 001001 |   |   |   |   |   |   |   |
+   | A | 001010 |   |   |   |   |   |   |   |
+   | b | 001011 |   |   |   |   |   |   |   |
+   | C | 001100 |   |   |   |   |   |   |   |
+   | d | 001101 |   |   |   |   |   |   |   |
+   | E | 001110 | 0 | 1 | 1 | 0 | 0 | 0 | 0 |
+   | F | 001111 | 0 | 1 | 1 | 1 | 0 | 0 | 0 |
+   | G | 010000 |   |   |   |   |   |   |   |
+   | h | 010001 |   |   |   |   |   |   |   |
+   | I | 010010 |   |   |   |   |   |   |   |
+   | J | 010011 |   |   |   |   |   |   |   |
+   | k | 010100 |   |   |   |   |   |   |   |
+   | L | 010101 |   |   |   |   |   |   |   |
+   | M | 010110 |   |   |   |   |   |   |   |
+   | n | 010111 |   |   |   |   |   |   |   |
+   | O | 011000 |   |   |   |   |   |   |   |
+   | P | 011001 |   |   |   |   |   |   |   |
+   | q | 011010 |   |   |   |   |   |   |   |
+   | r | 011011 |   |   |   |   |   |   |   |
+   | S | 011100 |   |   |   |   |   |   |   |
+   | t | 011101 |   |   |   |   |   |   |   |
+   | U | 011110 |   |   |   |   |   |   |   |
+   | v | 011111 |   |   |   |   |   |   |   |
+   | w | 100000 |   |   |   |   |   |   |   |
+   | X | 100001 |   |   |   |   |   |   |   |
+   | y | 100010 |   |   |   |   |   |   |   |
+   | Z | 100011 |   |   |   |   |   |   |   |
+   |   | 100100 |   |   |   |   |   |   |   |
 
 
 0. Complete the truth table for 2-bit *Identity comparator* (B equals A), and two *Magnitude comparators* (B is greater than A, B is less than A). Note that, such a digital device has four inputs and three outputs/functions.
