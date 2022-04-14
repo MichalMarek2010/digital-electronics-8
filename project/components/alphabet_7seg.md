@@ -2,7 +2,7 @@
 
 1.  Component can transcode maximum of 64 (2^6) characters according to following table, to a 7 segment common anode display.
 
-   ![7seg_commonAnode_display](\Images/Common-Anode-7-Segment-Display-Internal-Working.gif)
+   ![7seg_commonAnode_display](../Images/Common-Anode-7-Segment-Display-Internal-Working.gif)
 
     Completed decoder truth table for **common anode** 7-segment display.
 
