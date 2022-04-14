@@ -2,13 +2,14 @@
 
 0.  Component in/out:
 
+```vhdl
     entity alphabet_7seg is
         port(
             alphabet_i : in  std_logic_vector(6 - 1 downto 0);
             seg_o : out std_logic_vector(7 - 1 downto 0)
         );
     end entity alphabet_7seg;
-
+```
 1.  Component can transcode maximum of 64 (2^6) characters according to following table, to a 7 segment common anode display.
 
    ![7seg_commonAnode_display](../images/Common-Anode-7-Segment-Display-Internal-Working.gif)
