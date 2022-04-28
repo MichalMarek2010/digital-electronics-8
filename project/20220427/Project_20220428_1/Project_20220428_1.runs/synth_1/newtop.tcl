@@ -96,8 +96,6 @@ read_vhdl -library xil_defaultlib {
 }
 read_vhdl -vhdl2008 -library xil_defaultlib {
   C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220427/Project_20220428_1/Project_20220428_1.srcs/sources_1/imports/sources_1/imports/new/alphabet_to_code.vhd
-  C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220427/Project_20220428_1/Project_20220428_1.srcs/sources_1/imports/sources_1/imports/new/move_text.vhd
-  C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220427/Project_20220428_1/Project_20220428_1.srcs/sources_1/imports/sources_1/imports/new/switch_to_message.vhd
   C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220427/Project_20220428_1/Project_20220428_1.srcs/sources_1/imports/sources_1/new/newtop.vhd
 }
 OPTRACE "Adding files" END { }

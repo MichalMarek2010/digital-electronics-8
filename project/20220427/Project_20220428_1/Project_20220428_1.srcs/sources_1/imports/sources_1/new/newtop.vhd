@@ -51,7 +51,7 @@ architecture Behavioral of newtop is
 
 constant base_length : integer := 20;
 signal actual_length : integer;
-signal text : String(base_length downto 0) := "Testovaci zprava 12 ";
+signal text : String(base_length-1 downto 0) := "Testovaci zprava 12 ";
 signal code : array_std_logic(base_length downto 0)(5 downto 0);
 signal data_7seg : array_std_logic(7 downto 0)(5 downto 0);
 
