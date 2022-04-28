@@ -85,18 +85,18 @@ begin
         
     -- Instance of move_text
     
-    move : entity work.move_text 
-        generic map(
-            default_speed => 50000000,
-            code_length_i => base_length   
-        )
-        port map(
-            clk     => CLK100MHZ,
-            reset   => BTNC,
-            code_i => code,
-            actual_length_i => actual_length,
-            data_o => data_7seg
-        );   
+--    move : entity work.move_text 
+--        generic map(
+--            default_speed => 50000000,
+--            code_length_i => base_length   
+--        )
+--        port map(
+--            clk     => CLK100MHZ,
+--            reset   => BTNC,
+--            code_i => code,
+--            actual_length_i => actual_length,
+--            data_o => data_7seg
+--        );   
         
         
     -- Instance of driver_7seg_8characters
@@ -105,14 +105,14 @@ begin
         port map(
             clk     => CLK100MHZ,
             reset   => BTNC,
-            data0_i => data_7seg(0),
-            data1_i => data_7seg(1),
-            data2_i => data_7seg(2),
-            data3_i => data_7seg(3),
-            data4_i => data_7seg(4),
-            data5_i => data_7seg(5),
-            data6_i => data_7seg(6),
-            data7_i => data_7seg(7),
+            data0_i => code(0),
+            data1_i => code(1),
+            data2_i => code(2),
+            data3_i => code(3),
+            data4_i => code(4),
+            data5_i => code(5),
+            data6_i => code(6),
+            data7_i => code(7),
             seg_o(6) => CA,
             seg_o(5) => CB,
             seg_o(4) => CC,
