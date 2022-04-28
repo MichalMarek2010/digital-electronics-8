@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/APPZ/Xilinx/Vivado/2020.1/ids_lite/ISE/bin/nt64;C:/APPZ/Xilinx/Vivado/2020.1/ids_lite/ISE/lib/nt64:C:/APPZ/Xilinx/Vivado/2020.1/bin
+  PATH=C:/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2020.2/bin
 else
-  PATH=C:/APPZ/Xilinx/Vivado/2020.1/ids_lite/ISE/bin/nt64;C:/APPZ/Xilinx/Vivado/2020.1/ids_lite/ISE/lib/nt64:C:/APPZ/Xilinx/Vivado/2020.1/bin:$PATH
+  PATH=C:/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2020.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Documents/xzarec01/digital-electronics-1/Project/Test_02/Test_02.runs/synth_1'
+HD_PWD='C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220420/Test_02/Test_02.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+EAStep vivado -log driver_7seg_8characters.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source driver_7seg_8characters.tcl

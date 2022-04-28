@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Apr 20 10:47:18 2022
-# Process ID: 9888
-# Current directory: D:/Documents/xzarec01/digital-electronics-1/Project/Test_02/Test_02.runs/impl_1
-# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
-# Log file: D:/Documents/xzarec01/digital-electronics-1/Project/Test_02/Test_02.runs/impl_1/top.vdi
-# Journal file: D:/Documents/xzarec01/digital-electronics-1/Project/Test_02/Test_02.runs/impl_1\vivado.jou
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Apr 27 19:53:38 2022
+# Process ID: 13384
+# Current directory: C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220420/Test_02/Test_02.runs/impl_1
+# Command line: vivado.exe -log driver_7seg_8characters.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source driver_7seg_8characters.tcl -notrace
+# Log file: C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220420/Test_02/Test_02.runs/impl_1/driver_7seg_8characters.vdi
+# Journal file: C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220420/Test_02/Test_02.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source top.tcl -notrace
+source driver_7seg_8characters.tcl -notrace

@@ -17,10 +17,16 @@
 -- Additional Comments:
 -- 
 ----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+package bus_multiplexer_pkg is
+        type array_std_logic is array(natural range <>) of std_logic_vector;
+end package;
 
 library IEEE;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+use IEEE.STD_LOGIC_1164.ALL;
+use work.bus_multiplexer_pkg.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -41,7 +47,8 @@ entity top is
            CF : out STD_LOGIC;
            CG : out STD_LOGIC;
            AN : out std_logic_vector (7 downto 0);
-           BTNC : in STD_LOGIC);
+           BTNC : in std_logic;
+           SW : in STD_LOGIC_vector(15 downto 0));
 end top;
 
 ------------------------------------------------------------------------
@@ -49,74 +56,67 @@ end top;
 ------------------------------------------------------------------------
 architecture Behavioral of top is
 
-  -- Internal clock enable
-  signal clk  : std_logic;
-  signal data0 : std_logic_vector(5 downto 0);
-  signal data1 : std_logic_vector(5 downto 0);
-  signal data2 : std_logic_vector(5 downto 0);
-  signal data3 : std_logic_vector(5 downto 0);
-  signal data4 : std_logic_vector(5 downto 0);
-  signal data5 : std_logic_vector(5 downto 0);
-  signal data6 : std_logic_vector(5 downto 0);
-  signal data7 : std_logic_vector(5 downto 0);
-  signal reset : std_logic;
-  
-  -- Internal counter
---  signal s_cnt : std_logic_vector(4 - 1 downto 0);
-                    --ahoj jak se mas
-              type rl is array(15 downto 0) of std_logic_vector(5 downto 0);
-              constant r:rl:=(b"001010",b"010001",b"011000",b"010011",b"111111",b"010011",b"001010",b"010100",b"111111",b"011100",b"001110",b"111111",b"010110",b"001010",b"011100",b"111111");
-               --constant r:rl:=(b"000001",b"000010",b"000011",b"000100",b"000101",b"000110",b"000111",b"000000");
-              signal rsig:rl:=r;
+signal length : integer := 63;
+signal text : String(63 downto 0);
+signal code : array_std_logic(63 downto 0)(5 downto 0);
+signal data_7seg : array_std_logic(7 downto 0)(5 downto 0);
 
-          begin
+begin
 
-             process(clk)
-             begin
-                if rising_edge(clk) then
-                   if(BTNC='1') then
-                      rsig<=r;
-                   else
-                      rsig<=rsig(14 downto 0)&rsig(15);
-                   end if;
-                end if;
-             end process;
-
-             data0<=rsig(0);
-             data1<=rsig(1);
-             data2<=rsig(2);
-             data3<=rsig(3);
-             data4<=rsig(4);
-             data5<=rsig(5);
-             data6<=rsig(6);
-             data7<=rsig(7);
----------------------------------------------------------
- 
-  clk_en0 : entity work.clock_enable
+    -- Instance of switch_to_message
+    
+    switch : entity work.switch_to_message
         generic map(
-            --g_MAX => 4    -- FOR SIMULATION, CHANGE THIS VALUE TO 4
-            g_MAX => 50000000 -- FOR IMPLEMENTATION, KEEP THIS VALUE TO 400,000    
+            default_length => 63 
         )
         port map(
             clk   => CLK100MHZ,   -- Main clock
             reset => BTNC, -- Synchronous reset
-            ce_o  => clk
+            sw_state_i => SW, 
+            text_o => text,
+            text_length => length
         );
-
--- Instance of driver_7seg_8characters
+        
+    -- Instance of alphabet_to_code
+    
+    alphabet : entity work.alphabet_to_code 
+        generic map(
+            text_length_i => length 
+        )
+        port map(
+            text_i => text(length-1 downto 0),
+            code_o  => code
+        );
+        
+    -- Instance of move_text
+    
+    move : entity work.move_text 
+        generic map(
+            default_speed => 50000000,
+            code_length_i => length    
+        )
+        port map(
+            clk     => CLK100MHZ,
+            reset   => BTNC,
+            code_i => code,
+            data_o => data_7seg
+        );   
+        
+        
+    -- Instance of driver_7seg_8characters
 
     driver : entity work.driver_7seg_8characters
         port map(
             clk     => CLK100MHZ,
             reset   => BTNC,
-            data0_i => data0,
-            data1_i => data1,
-            data2_i => data2,
-            data3_i => data3,
-            data4_i => data4,
-            data5_i => data5,
-            data6_i => data6,
-            data7_i => data7,
+            data0_i => data_7seg(0),
+            data1_i => data_7seg(1),
+            data2_i => data_7seg(2),
+            data3_i => data_7seg(3),
+            data4_i => data_7seg(4),
+            data5_i => data_7seg(5),
+            data6_i => data_7seg(6),
+            data7_i => data_7seg(7),
             seg_o(6) => CA,
             seg_o(5) => CB,
             seg_o(4) => CC,
@@ -126,10 +126,7 @@ architecture Behavioral of top is
             seg_o(0) => CG,
             dig_o    => AN
             );
-  -- Connect one common anode to 3.3V
---  AN <= b"1111_1110";
-
-  -- Display counter values on LEDs
---  LED(3 downto 0) <= s_cnt;
+        -- Connect one common anode to 3.3V
+        --  AN <= b"1111_1110";
 
 end architecture Behavioral;
