@@ -1,42 +1,47 @@
-# YOUR_PROJECT_TITLE
+# Bežící text na 7-seg displeji
 
-### Team members
+### Členové týmu
 
-* Member 1 (responsible for xxx)
-* Member 2 (responsible for xxx)
-* Member 3 (responsible for xxx)
-* ...
+David Strouhal 230671
+* https://github.com/20David2/digital-electronics-1
 
-### Table of contents
+Martin Zárecký 230916
+* https://github.com/Martinececicek
 
-* [Project objectives](#objectives)
-* [Hardware description](#hardware)
-* [VHDL modules description and simulations](#modules)
-* [TOP module description and simulations](#top)
+Michal Marek 195387
+* https://github.com/MichalMarek2010/digital-electronics-1
+
+
+### Obsah projektu
+
+* [Cíle projektu](#objectives)
+* [Popis hardwaru](#hardware)
+* [Popis a simulace modulů VHDL](#modules)
+* [Popis modulu TOP a jeho simulace](#top)
 * [Video](#video)
-* [References](#references)
+* [Reference](#references)
 
 <a name="objectives"></a>
 
-## Project objectives
+## Cíle projektu
 
 Write your text here.
 
 <a name="hardware"></a>
 
-## Hardware description
+## Popis hardwaru
 
 Write your text here.
 
 <a name="modules"></a>
 
-## VHDL modules description and simulations
+## Popis a simulace modulů VHDL
 
 Write your text here.
 
 <a name="top"></a>
 
-## TOP module description and simulations
+## Popis modulu TOP a jeho simulace
 
 Write your text here.
 
@@ -48,6 +53,6 @@ Write your text here
 
 <a name="references"></a>
 
-## References
+## Reference
 
 1. Write your text here.
