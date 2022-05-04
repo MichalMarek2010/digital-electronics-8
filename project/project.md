@@ -3,9 +3,8 @@
 ### Team members
 
 * Member 1 (responsible for xxx)
-* Member 2 (responsible for xxx)
-* Member 3 (responsible for xxx)
-* ...
+* 
+* https://github.com/MichalMarek2010/digital-electronics-1
 
 ### Table of contents
 
