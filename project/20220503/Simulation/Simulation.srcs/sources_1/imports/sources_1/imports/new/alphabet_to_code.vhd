@@ -47,16 +47,8 @@ entity alphabet_to_code is
     Port (
         text_i : in string (base_text_length_i downto 1);
         text_length_i : integer;
---        code_o : out array_std_logic(base_text_length_i downto 1)(5 downto 0)
---        code_o : out std_logic_vector (5 downto 0);
-        data0_i : out  std_logic_vector(5 downto 0);
-        data1_i : out  std_logic_vector(5 downto 0);
-        data2_i : out  std_logic_vector(5 downto 0);
-        data3_i : out  std_logic_vector(5 downto 0);
-        data4_i : out  std_logic_vector(5 downto 0);
-        data5_i : out  std_logic_vector(5 downto 0);
-        data6_i : out  std_logic_vector(5 downto 0);
-        data7_i : out  std_logic_vector(5 downto 0)
+        code_1_o : out std_logic_vector(5 downto 0)
+        --
     );
 end alphabet_to_code;
 
@@ -65,7 +57,7 @@ architecture Behavioral of alphabet_to_code is
 signal char : character;
 signal code_char : std_logic_vector(5 downto 0);
 --signal code : array_std_logic(text_length_i downto 1)(5 downto 0);
-type TEST_ARRAY is array (integer range <>) of std_logic_vector ; 
+type TEST_ARRAY is array (natural range <>) of std_logic_vector; 
 signal code : TEST_ARRAY(text_length_i downto 1) (5 downto 0);
 
 begin   
@@ -74,20 +66,12 @@ begin
     
     begin
     
-        for I in 0 to text_length_i loop
+        for I in 1 to text_length_i loop
             char <= text_i(I);
-            code_char <= code(I);
-        end loop;
+            code(I) <= code_char;
+        end loop;        
         
---        code_o(text_length_i downto 1) <= code;
-        data0_i <= code(1);
-        data1_i <= code(2);
-        data2_i <= code(3);
-        data3_i <= code(4);
-        data4_i <= code(5);
-        data5_i <= code(6);
-        data6_i <= code(7);
-        data7_i <= code(8);    
+        code_1_o <= code(1);
         
             
     end process p_mux;
