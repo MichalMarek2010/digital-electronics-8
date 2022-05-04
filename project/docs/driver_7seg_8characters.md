@@ -24,7 +24,7 @@
 
 2. Simulation, including reports.
 
-   ![Simulation screenshot](../images/)
+   ![Simulation screenshot](../images/driver_7seg_8characters_simulation_console.png)
 
 3. Link to your public EDA Playground example:
 
