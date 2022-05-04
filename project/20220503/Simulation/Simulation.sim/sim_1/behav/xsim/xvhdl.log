@@ -1,5 +1,4 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220503/Simulation/Simulation.srcs/sources_1/imports/sources_1/imports/new/alphabet_to_code.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'alphabet_to_code'
-WARNING: [VRFC 10-3711] signal 'text_length_i' is used in subtype-indication/type-definition [C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220503/Simulation/Simulation.srcs/sources_1/imports/sources_1/imports/new/alphabet_to_code.vhd:69]
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/david/OneDrive/Dokumenty/GitHub/digital-electronics-1/project/20220503/Simulation/Simulation.srcs/sim_1/new/tb_alphabet_to_code.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'tb_alphabet_to_code'
