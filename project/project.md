@@ -25,13 +25,24 @@ Michal Marek 195387
 
 ## Cíle projektu
 
-Write your text here.
+* Text na 7-seg displeji bude obsahovat všechny čísla, písmnena z abecedy a mezeru
+
+
+-Tlacitka:
+* BTNC (prostredni): reset
+* 
+* BTNU,BTND (nahoru,dolu): rychlost behu +-
+* BTNL,BTNR (vpravo,vlevo): pokud je rychlost snizena na minimum -> posun o jeden znak
+* RGB LED(16,17) - signalizace rychlosti
+* SWITCH 0-15  +  LED 0-15  -> prednastavene texty, podle zvoleneho switche bude behat text (maximalne 16 prednastavenych textu)
 
 <a name="hardware"></a>
 
 ## Popis hardwaru
 
-Write your text here.
+* Nexys A7
+
+Pro zobrazení vytvořených programů využíváme desku Nexys A7 s FPGA Artix-7. Jedná se platformu pro vytvaření a simulovaní digitalních obvodů. Obsahuje velkou externí paměť, velkokapacitní FPGA a může komunikovat přes usb porty.  
 
 <a name="modules"></a>
 
@@ -55,4 +66,4 @@ Write your text here
 
 ## Reference
 
-1. Write your text here.
+1. https://codegolf.stackexchange.com/questions/173837/longest-seven-segment-word
